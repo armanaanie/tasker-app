@@ -38,21 +38,7 @@ updateTotal()
 
 });
 
-editBtn.addEventListener("click",()=>{
-    if(editBtn.innerText==="Edit"){
-        const input =document.createElement("input");
-        input.type="text";
-        input.value=text.innerText;
 
-        text.replaceWith(input);
-        input.id="text";
-
-        editBtn.innerText="Save";
-    }
-else{const input=document.getElementById("text");
-    const p=document.create
-})
-}
 actions.appendChild(doneBtn);
 actions.appendChild(deleteBtn);
 li.appendChild(span);
@@ -72,5 +58,5 @@ taskForm.addEventListener("submit",(e)=>{
 const taskText=taskInput.value
 
   createTask(taskText);
-  input.value=""
+  input.value= ""
 })

@@ -31,9 +31,10 @@ ul {
     
 }
 button {
+    background-color: blue;
 padding: 8px;
 border-radius: 6px;
-color: black;
+color: white;
 border-style: none;
 
      
@@ -47,16 +48,20 @@ li {display: flex;
     border-radius: 6px;
 
 }
-.complete{
+.completed{
     text-decoration: line-through;
     color: gray;
 }
-.actions button {
+.actions .delete-Btn {
     background: orangered;
     margin: 8px;
 }
-.actions .done-btn {
+.actions .done-Btn {
     background: green;
+}
+
+.actions .edit-Btn {
+    background-color: brown;
 }
 footer {
     margin-top: 25px;

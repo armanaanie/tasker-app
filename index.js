@@ -47,11 +47,14 @@ editBtn.addEventListener("click", () => {
       editBtn.innerText = "Save";
     } else {
       const input = li.querySelector("input");
-      span.innerText = input.value;
+      const updatedText = input.value.trim();
+span.textContent = updatedText || span.textContent;
 
       li.replaceChild(span, input);
       editBtn.innerText = "Edit";
     }
+
+
   });
 
 

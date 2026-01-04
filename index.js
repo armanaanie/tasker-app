@@ -37,10 +37,27 @@ doneBtn.addEventListener("click",()=>{
 updateTotal()
 
 });
+editBtn.addEventListener("click", () => {
+    if (editBtn.innerText === "Edit") {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = span.innerText;
+
+      li.replaceChild(input, span);
+      editBtn.innerText = "Save";
+    } else {
+      const input = li.querySelector("input");
+      span.innerText = input.value;
+
+      li.replaceChild(span, input);
+      editBtn.innerText = "Edit";
+    }
+  });
 
 
 actions.appendChild(doneBtn);
 actions.appendChild(deleteBtn);
+actions.appendChild(editBtn)
 li.appendChild(span);
 li.appendChild(actions);
 taskList.appendChild(li);
@@ -58,5 +75,5 @@ taskForm.addEventListener("submit",(e)=>{
 const taskText=taskInput.value
 
   createTask(taskText);
-  input.value= ""
+  input.value= " "
 })
